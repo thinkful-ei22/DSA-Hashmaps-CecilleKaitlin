@@ -56,6 +56,25 @@ const hashString = function(string) {
     //Set the default pairCount to 0.
     let pairCount = 0;
 
+    let newHash = new HashMap;
+    for (let i = 0; i < string.length; i++) {
+      newHash.set(i, string[i]);
+    }
+    // console.log(JSON.stringify(newHash, null, 2));
+
+    for (let i = 0; i < string.length; i++) {
+      let checkLetter = newHash.get(i);
+      // console.log(checkLetter);
+      // for (let j = 1; j < string.length; j++) {
+      //   let newLetter = newHash.get(j);
+      //   if (newLetter === checkLetter) {
+      //     pairCount++;
+      //   }
+      }
+
+    // length = 7
+    // 4 letters, 3 null = 3 duplicates, 1 unique
+
     //Get the number of pairs in the string.
     const pairTotal = (string.length - 1) / 2;
 
