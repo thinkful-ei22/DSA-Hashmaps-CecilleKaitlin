@@ -33,7 +33,9 @@ class HashMap {
             key,
             value
         };
-        this.length++;
+        if (index.deleted !== false) {
+            this.length++;
+        }
     }
 
     remove(key) {
