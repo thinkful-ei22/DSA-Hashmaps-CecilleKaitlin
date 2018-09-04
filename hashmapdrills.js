@@ -20,4 +20,53 @@ const main = function() {
   console.log(lor);
 }
 
-main();
+// main();
+
+//Palindrome plan of attack
+
+//input: "wow"
+//output: true
+
+//input: "north""
+//output: false
+
+//Creating the algorithm
+//1. Iterate through the string.
+//2. Get the number of pairs - (str.length - 1) / 2 --needs mod - do something here in hashmap to bring to number 4
+//3. Write an expression that groups matching characters into pairs.
+//4. Write an expression that finds a single character with no match if it exists.
+//5. When 3 equals 2 AND 4 is TRUE - return TRUE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const hashString = function(string) {
+    //Set the default pairCount to 0.
+    let pairCount = 0;
+
+    //Get the number of pairs in the string.
+    const pairTotal = (string.length - 1) / 2;
+
+    //Iterate through the string
+    for (let i = 0; i < string.length; i++) {
+
+      //Write an expression that groups matching characters into pairs.
+
+
+    }
+    return;
+}
+
+hashString("racecar");
