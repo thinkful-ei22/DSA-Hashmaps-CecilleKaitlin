@@ -22,18 +22,32 @@ const main = function() {
 
 // main();
 
-const hashString = function(string) {
-    let newHash = new HashMap;
-    for (let i = 0; i < string.length; i++) {
-      newHash.set(string.charAt(i), i);
-    }
-    if(string.length % 2 === 0 && newHash.length === string.length / 2) {
-      return true;
-    } else if(string.length % 2 === 1 && newHash.length === (string.length / 2) + 1) {
-      return true;
-    } else {
-      return false;
-    }
+// Palindrome
+
+function palindrome(string) {
+  let newHash = new HashMap();
+  let odd = 0;
+  for (let i = 0; i < string.length; i++) {
+    try {
+      let charCount = newHash.get(string[i]);
+      charCount ++;
+      if (charCount % 2 === 0) {
+        odd --;
+      } else {
+        odd ++;
+      }
+      newHash.set(string[i], charCount);
+    } catch { 
+      newHash.set(string[i], 1);
+      odd ++;
+      }
+  } 
+  if (string.length % 2 === 0 && odd === 0 || string.length % 2 === 1 && odd === 1) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
-console.log(hashString("acecarr"));
+console.log(palindrome("acecarr"));
