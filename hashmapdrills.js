@@ -22,7 +22,7 @@ const main = function() {
 
 // main();
 
-// Palindrome
+//-----------------------------Palindrome--------------------------------
 
 function palindrome(string) {
   let newHash = new HashMap();
@@ -37,11 +37,11 @@ function palindrome(string) {
         odd ++;
       }
       newHash.set(string[i], charCount);
-    } catch { 
+    } catch {
       newHash.set(string[i], 1);
       odd ++;
       }
-  } 
+  }
   if (string.length % 2 === 0 && odd === 0 || string.length % 2 === 1 && odd === 1) {
     return true;
   }
